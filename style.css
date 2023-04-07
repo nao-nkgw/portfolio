@@ -1,0 +1,824 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  position: relative;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #155e75;
+  background-image: url(./img/profile_image.jpg);
+  background-attachment: fixed;
+  background-position: right;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* introduction animation */
+
+.content p {
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+  color: #fff;
+}
+
+#hello {
+  padding-top: 2rem;
+  font-size: 7rem;
+}
+
+span {
+  animation-name: Nao;
+  animation-duration: 0.4s;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.span_nao1 {
+  animation-delay: 0.3s;
+}
+.span_nao2 {
+  animation-delay: 1.5s;
+}
+.span_nao3 {
+  animation-delay: 3s;
+}
+
+@keyframes Nao {
+  0% {
+    color: #fff;
+  }
+
+  5% {
+    color: #fff;
+  }
+  90% {
+    color: orange;
+  }
+
+  100% {
+    color: orange;
+  }
+}
+
+#line_text {
+  position: relative;
+  font-size: 7rem;
+  margin-bottom: 2rem;
+}
+
+#line_text a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#line_text :before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+  border-bottom: solid 0.5rem orange;
+  animation: line 0.6s linear forwards;
+  animation-delay: 4s;
+}
+
+@keyframes line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* card, icon parents start */
+.container {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+}
+
+/* icons */
+
+.contact-container {
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  height: 300px;
+  width: 100px;
+  text-align: center;
+  margin-right: 5rem;
+  padding-top: 2rem;
+}
+
+#contact {
+  height: 30%;
+
+  font-size: 5rem;
+}
+
+#contact a {
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #155e75;
+}
+.fa-solid {
+  opacity: 0;
+}
+
+#contact a:hover {
+  color: orange;
+  
+}
+
+.about_me {
+  writing-mode: vertical-rl;
+  font-size: 5rem;
+}
+
+.contact-container-goto-bottom {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  
+  width: 200px;
+  text-align: center;
+}
+
+#contact_goto-bottom {
+  height: 30%;
+  padding-right: 0rem;
+  font-size: 7rem;
+}
+
+#contact_goto-bottom a {
+  margin-bottom: 4rem;
+  text-decoration: none;
+  color: #155e75;
+}
+
+#contact_goto-bottom a:hover {
+  color: orange;
+  
+}
+
+#scroll-1 {
+  font-size: 15rem;
+  animation-name: none;
+  animation-name: goto-about;
+  animation-duration: 10s;
+  animation-delay: 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+#scroll-2 {
+  font-size: 15rem;
+  animation-name: none;
+  animation-name: goto-about;
+  animation-duration: 0.6s;
+  animation-delay: 7s;
+  animation-iteration-count: 5;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+@keyframes goto-about {
+  0% {
+    color: #155e75;
+  }
+  100% {
+    color: orange;
+  }
+}
+
+#content-title1 a {
+  color: #cde1e1;
+  font-size: 2rem;
+  text-decoration: none;
+  margin-top: 3rem;
+}
+
+/* card start */
+
+.box-container {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  background-color: #155f7588;
+  gap: 25px;
+  padding-left: 4rem;
+  height: auto;
+
+  padding-bottom: 5%;
+  padding-top: 5%;
+  position: relative;
+}
+
+.box {
+  text-align: center;
+  border: 2px solid #cde1e1;
+  box-shadow: 5px 5px 20px;
+  border-radius: 8px;
+  background: #111;
+  background-image: linear-gradient(
+    0deg,
+    rgb(208, 136, 2) 0%,
+    rgb(20, 10, 10) 70%
+  );
+  height: 275px;
+  text-decoration: none;
+  position: relative;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.box img {
+  width: 200px;
+  object-fit: cover;
+  min-height: 235px;
+}
+
+.box a:hover {
+  color: #757575;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.box p {
+  position: absolute;
+  top: 20%;
+  right: 1rem;
+  left: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+}
+
+.title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /*distance from text*/
+  width: 0%; /*default: not display the line*/
+  height: 2px; /*hight of line*/
+  background: orange;
+  z-index: -1;
+  transition: all 0.3s ease-in; /*speed od animation*/
+}
+.box :hover .title:after {
+  width: 100%; /*show the line when it is hover*/
+}
+
+.box .caption {
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 43%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.box .caption-btn {
+  margin: 3px auto 0.5px auto;
+  padding: 0 1px;
+  font-size: 1.7rem;
+  width: 95px;
+  height: 22px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.caption-btn:hover {
+  margin: 3px auto 0.5px auto;
+  font-size: 1.7rem;
+  background-color: #fff;
+  width: 95px;
+  height: 22px;
+  border: 2px solid #fff;
+  border-radius: 11px;
+  color: #155e75;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.box .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* not display mask */
+  background-color: rgba(0, 0, 0, 0.6); /* mask transparency */
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  height: 275px;
+}
+
+.box:hover .mask {
+  opacity: 1; /* show mask */
+}
+
+.box h3 {
+  padding: 1rem 1rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #8a8787;
+  background-color: #cde1e1;
+  text-shadow: -0.5px -0.5px 0.8px #696969, 1px 1px #ffffff;
+}
+
+.box a {
+  text-decoration: none;
+}
+
+/* card end */
+
+/* about */
+
+#about-me-container {
+  background: rgb(201, 131, 1);
+  position: initial;
+  top: 1000px;
+  bottom: 100px;
+  height: auto;
+  width: 60%;
+  gap: 25px;
+  padding-top: 2.5%;
+  padding-bottom: 3%;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+#content-title-2 {
+  color: #cde1e1;
+  font-size: 4.9rem;
+}
+
+#about {
+  color: #155e75;
+  text-decoration: none;
+  animation-name: none;
+}
+#about a {
+  text-decoration: none;
+  animation-name: none;
+}
+
+/* goto Top */
+
+.goto-top-container {
+  position: absolute;
+
+  right: 0;
+
+  bottom: 23.5%;
+  color: #155e75;
+  padding-right: 5.5rem;
+  animation-name: none;
+}
+
+.projects a {
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  font-size: 3rem;
+  color: #155e75;
+}
+
+#scroll-3{
+  font-size: 9rem;
+  animation-name: none;
+}
+.projects a:hover {
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  font-size: 3rem;
+  color: orange;
+}
+
+.goto-top-container2 {
+  position: absolute;
+
+  right: 0;
+
+  bottom: 3%;
+  color: #fff;
+  padding-right: 5.5rem;
+  animation-name: none;
+}
+
+.projects2 a {
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  font-size: 3rem;
+  color: #fff;
+}
+
+#scroll-4{
+  font-size: 9rem;
+  animation-name: none;
+}
+.projects2 a:hover {
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  font-size: 3rem;
+  color: orange;
+}
+
+/* --------------------------tablet------------------------------------ */
+
+
+@media screen and (max-width: 768px) {
+
+  
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+  }
+  .box-container .box {
+    text-align: center;
+  }
+
+  .box {
+    flex-basis: 20%;
+  }
+
+  .box-container .box {
+    text-align: center;
+  }
+
+  .box-container .box img {
+    height: 200px;
+  }
+}
+
+.about_me {
+  writing-mode: vertical-rl;
+  font-size: 5rem;
+}
+
+.contact-container-goto-bottom {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 200px;
+  text-align: center;
+  
+}
+
+#contact_goto-bottom {
+  height: 30%;
+  padding-right: 0rem;
+  font-size: 7rem;
+}
+
+#contact_goto-bottom a {
+  margin-bottom: 4rem;
+  text-decoration: none;
+  color: #155e75;
+}
+
+#contact_goto-bottom a:hover {
+  color: orange;
+  
+}
+
+#about-me-container {
+  background: rgb(201, 131, 1);
+  position: initial;
+  top: 1000px;
+  bottom: 100px;
+  height: auto;
+  width: 60%;
+  gap: 25px;
+  padding-top: 2.5%;
+  padding-bottom: 3%;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+#content-title-2 {
+  color: #cde1e1;
+  font-size: 4.9rem;
+}
+
+#about {
+  color: #155e75;
+  text-decoration: none;
+  animation-name: none;
+}
+#about a {
+  text-decoration: none;
+  animation-name: none;
+}
+
+#hello,
+#line {
+  font-size: 7rem;
+}
+
+.goto-top-container2 {
+  position: absolute;
+
+  right: 0;
+
+  bottom: 10%;
+  color: #155e75;
+  padding-right: 5.5rem;
+  animation-name: none;
+ 
+}
+
+.projects2 a {
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  font-size: 3rem;
+  color: #fff;
+}
+
+#scroll-4{
+  font-size: 9rem;
+  animation-name: none;
+}
+.projects2 a:hover {
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  font-size: 3rem;
+  color: orange;
+}
+
+/* -------------------------mobile------------------------------------- */
+
+@media screen and (max-width: 499px) {
+  body {
+    background-image: url(./img/profile_image.jpg);
+    background-attachment: fixed;
+    background-position-x: -700px;
+    background-position-y: -20px;
+    width: 100%;
+
+    position: relative;
+
+    background-size: 259%;
+
+    background-repeat: 2;
+  }
+
+  #hello {
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    font-size: 3rem;
+  }
+
+  #line_text {
+    position: relative;
+    font-size: 5rem;
+  }
+
+  #line_text :before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+    border-bottom: solid 0.5rem orange;
+    animation: line 2s linear forwards;
+    animation-delay: 4s;
+    animation-play-state: paused;
+  }
+
+  @keyframes line {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  /* box */
+
+  .box-container {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .box {
+    text-align: center;
+  }
+
+  .content p {
+    color: #fff;
+  }
+
+  #content-title1 {
+    text-align: right;
+    color: #cde1e1;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-top: 10rem;
+  }
+
+  /* icons1 */
+
+  .contact-container {
+    position: fixed;
+ 
+    display: flex;
+
+    height: 300px;
+    width: 50px;
+    text-align: center;
+    margin-right: 3rem;
+    padding-top: 2rem;
+  }
+
+ 
+  #contact {
+ 
+    font-size: 3.5rem;
+  }
+
+  #contact a {
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #155e75;
+  }
+
+  #contact a:hover {
+    color: orange;
+  }
+
+  .about_me {
+    writing-mode: vertical-rl;
+    font-size: 0rem;
+  }
+
+  .contact-container-goto-bottom {
+    position: absolute;
+    top: 8%;
+    right: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: -20%;
+    width: 25%;
+  }
+
+  #contact_goto-bottom {
+    height: 30%;
+
+    font-size: 7rem;
+  }
+
+  #contact_goto-bottom a {
+    margin-bottom: 4rem;
+    text-decoration: none;
+    color: #155e75;
+  }
+
+  #contact_goto-bottom a:hover {
+    color: orange;
+  }
+
+  #scroll-1 {
+    font-size: 10rem;
+    animation-name: none;
+    animation-name: goto-about;
+    animation-duration: 10s;
+    animation-delay: 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  #scroll-2 {
+    font-size: 10rem;
+    animation-name: none;
+    animation-name: goto-about;
+    animation-duration: 0.6s;
+    animation-delay: 7s;
+    animation-iteration-count: 5;
+    animation-fill-mode: forwards;
+  }
+
+  /* about */
+
+  #about-me-container {
+    background: rgb(201, 131, 1);
+    position: initial;
+    top: 1000px;
+    bottom: 100px;
+    height: auto;
+    width: 80%;
+    gap: 25px;
+    padding-top: 2.5%;
+    padding-bottom: 10rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  #content-title-2 {
+    color: #cde1e1;
+    font-size: 3rem;
+  }
+
+  #about {
+    color: #155e75;
+    text-decoration: none;
+    animation-name: none;
+  }
+  #about a {
+    text-decoration: none;
+    animation-name: none;
+  }
+
+  /* goto Top */
+
+  .goto-top-container {
+    position: absolute;
+
+    right: 0;
+
+    bottom: 23.5%;
+    color: #155e75;
+    padding-right: 5.5rem;
+    animation-name: none;
+  }
+
+  .projects a {
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    font-size: 3rem;
+    color: #155e75;
+  }
+
+  #scroll-3 {
+    font-size: 9rem;
+    animation-name: none;
+  }
+  .projects a:hover {
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    font-size: 3rem;
+    color: orange;
+  }
+
+  .goto-top-container2 {
+    position: absolute;
+  
+    right: 0;
+
+    bottom: 3%;
+    color: #155e75;
+    padding-right: 5.5rem;
+    animation-name: none;
+   
+  }
+  
+  .projects2 a {
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    font-size: 3rem;
+    color: #fff;
+  }
+  
+  #scroll-4{
+    font-size: 9rem;
+    animation-name: none;
+  }
+  .projects2 a:hover {
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    font-size: 3rem;
+    color: orange;
+  }
+}
